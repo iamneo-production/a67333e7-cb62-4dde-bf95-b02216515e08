@@ -1,6 +1,6 @@
 package com.examly.springapp.model;
 
-import java.util.Date;
+import java.util.*;
 import javax.persistence.*;
 
 @Entity
@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class ResourceModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private UUID id;
 	
 	@Column(name = "resourceId")
 	private String resourceId;
@@ -56,11 +56,11 @@ public class ResourceModel {
 		this.active = active;
 	}
 
-	public long getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 
