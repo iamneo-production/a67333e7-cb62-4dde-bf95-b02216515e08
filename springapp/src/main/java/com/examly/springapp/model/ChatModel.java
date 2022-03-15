@@ -1,28 +1,48 @@
 package com.examly.springapp.model;
 
 import java.util.*;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "chats")
 public class ChatModel {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@Column(name = "chatId")
 	private String chatId;
+	
+	@OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "primaryUser", nullable = false)
 	private UserModel primaryUser;
+	
+	@OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "secondaryUser", nullable = false)
 	private UserModel secondaryUser;
+	
+	@ElementCollection // 1
+    @CollectionTable(name = "my_chats", joinColumns = @JoinColumn(name = "id")) // 2
+    @Column(name = "chatHistory")
 	private List<String> chatHistory;
+	
+	@Column(name = "status")
 	private boolean status;
+	
+	@Column(name = "lastSeen")
 	private Date lastSeen;
 	
 	public ChatModel() {
 		
 	}
 
-	public ChatModel(String chatId, UserModel primaryUser, UserModel secondaryUser, List<String> chatHistory,
+	public ChatModel(String chatId, UserModel primaryUser, UserModel secondaryUser,
 			boolean status, Date lastSeen) {
 		super();
 		this.chatId = chatId;
 		this.primaryUser = primaryUser;
 		this.secondaryUser = secondaryUser;
-		this.chatHistory = chatHistory;
+		//this.chatHistory = chatHistory;
 		this.status = status;
 		this.lastSeen = lastSeen;
 	}

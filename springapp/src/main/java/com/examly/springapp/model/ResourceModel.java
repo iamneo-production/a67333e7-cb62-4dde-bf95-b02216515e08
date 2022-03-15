@@ -1,18 +1,41 @@
 package com.examly.springapp.model;
 
 import java.util.Date;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "resources")
 public class ResourceModel {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@Column(name = "resourceId")
 	private String resourceId;
+	
+	@Column(name = "email")
 	private String resourceName;
+	
+	@Column(name = "resourceLink")
 	private String resourceLink;
+	
+	@Column(name = "imageUrl")
 	private String imageUrl;
+	
+	@Column(name = "resourceCategory")
 	private String resourceCategory;
+	
+	@Column(name = "createdOn")
 	private Date createdOn;
+	
+	@OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "createdBy", nullable = false)
 	private UserModel createdBy;
+	
+	@Column(name = "verified")
 	private boolean verified;
+	
+	@Column(name = "active")
 	private boolean active;
 	
 	public ResourceModel(){

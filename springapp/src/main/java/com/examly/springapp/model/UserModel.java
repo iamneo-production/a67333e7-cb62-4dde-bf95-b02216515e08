@@ -1,15 +1,33 @@
 package com.examly.springapp.model;
 
+import javax.persistence.*;
 
+@Entity
+@Table(name = "users")
 public class UserModel {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@Column(name = "email")
 	private String email;
+	
+	@Column(name = "password")
 	private String password;
+	
+	@Column(name = "username")
 	private String username;
+	
+	@Column(name = "mobileNumber")
 	private String mobileNumber;
+	
+	@Column(name = "qualification")
 	private String qualification;
+	
+	@Column(name = "active")
 	private boolean active;
+	
+	@Column(name = "role")
 	private String role;
 	
 	public UserModel(){
