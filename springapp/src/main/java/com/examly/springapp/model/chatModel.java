@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "chats")
-public class ChatModel {
+public class chatModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private UUID id;
@@ -32,11 +32,11 @@ public class ChatModel {
 	@Column(name = "lastSeen")
 	private Date lastSeen;
 	
-	public ChatModel() {
+	public chatModel() {
 		
 	}
 
-	public ChatModel(String chatId, UserModel primaryUser, UserModel secondaryUser,
+	public chatModel(String chatId, UserModel primaryUser, UserModel secondaryUser,
 			boolean status, Date lastSeen) {
 		super();
 		this.chatId = chatId;
