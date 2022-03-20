@@ -8,7 +8,8 @@ import javax.persistence.*;
 public class chatModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private UUID id;
+	@Column(name = "id")
+	private int id;
 	
 	@Column(name = "chatId")
 	private String chatId;
@@ -47,11 +48,11 @@ public class chatModel {
 		this.lastSeen = lastSeen;
 	}
 
-	public UUID getId() {
+	public int  getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

@@ -14,7 +14,8 @@ import javax.persistence.Table;
 public class LoginModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private UUID id;
+	@Column(name = "id")
+	private int id;
 	
 	@Column(name = "email")
 	private String email;
@@ -33,11 +34,11 @@ public class LoginModel {
 	}
 
 	
-	public UUID getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

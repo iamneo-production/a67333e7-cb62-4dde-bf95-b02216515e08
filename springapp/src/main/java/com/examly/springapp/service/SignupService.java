@@ -15,6 +15,7 @@ public class SignupService {
     @Autowired
     private UserRepository userRepository;
     public UserModel saveUser(UserModel user){
+
         return userRepository.save(user);
     }
     public List<UserModel> saveUsers(List<UserModel> user){
@@ -31,7 +32,7 @@ public class SignupService {
         return "User removed of id"+id;
     }
     public UserModel updateUser(UserModel user){
-        UserModel existingUser= (UserModel) userRepository.findAllById(Collections.singleton(user.getId()));
+        UserModel existingUser= userRepository.findAllById(user.getId());
         existingUser.setEmail(user.getEmail());
         existingUser.setUsername(user.getUsername());
         existingUser.setPassword(user.getPassword());

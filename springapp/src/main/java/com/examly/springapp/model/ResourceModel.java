@@ -8,7 +8,8 @@ import javax.persistence.*;
 public class ResourceModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private UUID id;
+	@Column(name = "id")
+	private int id;
 	
 	@Column(name = "resourceId")
 	private String resourceId;
@@ -56,11 +57,11 @@ public class ResourceModel {
 		this.active = active;
 	}
 
-	public UUID getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

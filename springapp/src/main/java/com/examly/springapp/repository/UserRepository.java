@@ -7,4 +7,5 @@ import java.util.UUID;
 
 public interface UserRepository extends JpaRepository<UserModel, UUID>  {
 
+    UserModel findAllById(int id);
 }
