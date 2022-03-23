@@ -1,5 +1,7 @@
 package com.examly.springapp.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import java.util.*;
 import javax.persistence.*;
 
@@ -10,11 +12,13 @@ public class ResourceModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
-	
+
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID",strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "resourceId")
 	private String resourceId;
 	
-	@Column(name = "email")
+	@Column(name = "resourceName")
 	private String resourceName;
 	
 	@Column(name = "resourceLink")
@@ -28,10 +32,9 @@ public class ResourceModel {
 	
 	@Column(name = "createdOn")
 	private Date createdOn;
-	
-	@OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "createdBy", nullable = false)
-	private UserModel createdBy;
+
+	@Column(name = "createdBy")
+	private String createdBy;
 	
 	@Column(name = "verified")
 	private boolean verified;
@@ -44,7 +47,7 @@ public class ResourceModel {
 	}
 	
 	public ResourceModel(String resourceId, String resourceName, String resourceLink, String imageUrl,
-			String resourceCategory, Date createdOn, UserModel createdBy, boolean verified, boolean active) {
+			String resourceCategory, Date createdOn, String createdBy, boolean verified, boolean active) {
 		super();
 		this.resourceId = resourceId;
 		this.resourceName = resourceName;
@@ -113,11 +116,11 @@ public class ResourceModel {
 		this.createdOn = createdOn;
 	}
 
-	public UserModel getCreatedBy() {
+	public String getCreatedBy() {
 		return createdBy;
 	}
 
-	public void setCreatedBy(UserModel createdBy) {
+	public void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
 	}
 
