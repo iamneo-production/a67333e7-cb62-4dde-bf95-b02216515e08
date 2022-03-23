@@ -24,10 +24,10 @@ public class SignupService {
     public List<UserModel> getUsers(){
         return userRepository.findAll();
     }
-    public UserModel getUsersById(int id){
+    public UserModel getUsersById(UUID id){
         return userRepository.findById(id).orElse(null);
     }
-    public String deleteUser(int id){
+    public String deleteUser(UUID id){
         userRepository.deleteById(id);
         return "User removed of id"+id;
     }

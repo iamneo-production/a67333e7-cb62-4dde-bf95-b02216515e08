@@ -1,19 +1,17 @@
 package com.examly.springapp.model;
 
-import java.time.LocalDate;
 import java.util.*;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "chats")
-public class chatModel {	
-//	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
-//	@Column(name = "id")
-//	private int id;
-
+public class chatModel {
 	@Id
-    @Column(name = "chatId")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
+	
+	@Column(name = "chatId")
 	private String chatId;
 	
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
@@ -25,7 +23,7 @@ public class chatModel {
 	private UserModel secondaryUser;
 	
 	@ElementCollection // 1
-    @CollectionTable(name = "my_chats", joinColumns = @JoinColumn(name = "chatId")) // 2
+    @CollectionTable(name = "my_chats", joinColumns = @JoinColumn(name = "id")) // 2
     @Column(name = "chatHistory")
 	private List<String> chatHistory;
 	
@@ -33,29 +31,31 @@ public class chatModel {
 	private boolean status;
 	
 	@Column(name = "lastSeen")
-	private LocalDate lastSeen;
+	private Date lastSeen;
 	
 	public chatModel() {
 		
 	}
 
-	public chatModel(String chatId, UserModel primaryUser, UserModel secondaryUser, List<String> chatHistory,
-			boolean status, LocalDate lastSeen) {
+	public chatModel(String chatId, UserModel primaryUser, UserModel secondaryUser,
+			boolean status, Date lastSeen) {
 		super();
 		this.chatId = chatId;
 		this.primaryUser = primaryUser;
 		this.secondaryUser = secondaryUser;
-		this.chatHistory = chatHistory;
+		//this.chatHistory = chatHistory;
 		this.status = status;
 		this.lastSeen = lastSeen;
 	}
-//	public int  getId() {
-//		return id;
-//	}
-//
-//	public void setId(int id) {
-//		this.id = id;
-//	}
+
+	public int  getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getChatId() {
 		return chatId;
 	}
@@ -96,11 +96,11 @@ public class chatModel {
 		this.status = status;
 	}
 
-	public LocalDate getLastSeen() {
+	public Date getLastSeen() {
 		return lastSeen;
 	}
 
-	public void setLastSeen(LocalDate lastSeen) {
+	public void setLastSeen(Date lastSeen) {
 		this.lastSeen = lastSeen;
 	}
 	
