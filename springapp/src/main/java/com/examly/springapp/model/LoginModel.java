@@ -14,8 +14,9 @@ import javax.persistence.Table;
 public class LoginModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	
+	@Column(name = "id")
+	private int id;
+  
 	@Column(name = "email")
 	private String email;
 	
@@ -31,13 +32,12 @@ public class LoginModel {
 		this.email = email;
 		this.password = password;
 	}
-
-	
-	public long getId() {
+  
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

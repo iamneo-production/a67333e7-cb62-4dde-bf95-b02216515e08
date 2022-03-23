@@ -8,7 +8,11 @@ import javax.persistence.*;
 @Table(name = "chats")
 public class chatModel {	
 	@Id
-	@Column(name = "chatId")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
+
+  @Column(name = "chatId")
 	private String chatId;
 	
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
@@ -44,15 +48,13 @@ public class chatModel {
 		this.status = status;
 		this.lastSeen = lastSeen;
 	}
+	public int  getId() {
+		return id;
+	}
 
-//	public long getId() {
-//		return id;
-//	}
-//
-//	public void setId(long id) {
-//		this.id = id;
-//	}
-
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getChatId() {
 		return chatId;
 	}
