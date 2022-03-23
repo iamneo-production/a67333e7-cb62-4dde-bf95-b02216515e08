@@ -16,7 +16,7 @@ public class LoginModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
-  
+	
 	@Column(name = "email")
 	private String email;
 	
@@ -32,7 +32,8 @@ public class LoginModel {
 		this.email = email;
 		this.password = password;
 	}
-  
+
+	
 	public int getId() {
 		return id;
 	}
