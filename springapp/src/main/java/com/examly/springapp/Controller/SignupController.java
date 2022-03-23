@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class SignupController {
 
@@ -23,7 +24,7 @@ public List<UserModel> getAllUsers(){
     return signupService.getUsers();
 }
     @DeleteMapping("/admin/delete/{id}")
-    public String delUserById(@RequestParam UUID id){
+    public String delUserById(@RequestParam int id){
         return signupService.deleteUser(id);
     }
 
