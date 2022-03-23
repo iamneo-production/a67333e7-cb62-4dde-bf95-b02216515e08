@@ -1,12 +1,11 @@
 package com.examly.springapp.repository;
-import java.util.UUID;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import com.examly.springapp.model.UserModel;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface UserRepository extends JpaRepository<UserModel, Integer>{
-  UserModel findAllById(int id);
+import java.util.UUID;
+
+public interface UserRepository extends JpaRepository<UserModel, UUID>  {
+
+    UserModel findAllById(int id);
 }
