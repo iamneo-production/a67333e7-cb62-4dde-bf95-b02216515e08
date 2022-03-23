@@ -20,19 +20,19 @@ import com.examly.springapp.repository.UserRepository;
 
 
 class ReqBody{
-	private long senderId;
+	private int senderId;
 	private String chat;
 	
-	ReqBody(long senderId, String chat){
+	ReqBody(int senderId, String chat){
 		this.senderId = senderId;
 		this.chat = chat;
 	}
 
-	public long getSenderId() {
+	public int getSenderId() {
 		return senderId;
 	}
 
-	public void setSenderId(long senderId) {
+	public void setSenderId(int senderId) {
 		this.senderId = senderId;
 	}
 
@@ -57,7 +57,7 @@ public class ChatController {
 	
 	
 	@PostMapping("/{id}")
-	String startChat(@PathVariable long id, @RequestBody ReqBody body){		
+	String startChat(@PathVariable int id, @RequestBody ReqBody body){		
 		UserModel primaryUser, secondaryUser;
 		String chatId = "";
 		
