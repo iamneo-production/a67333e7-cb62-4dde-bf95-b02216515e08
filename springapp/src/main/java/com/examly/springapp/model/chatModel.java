@@ -1,17 +1,18 @@
 package com.examly.springapp.model;
 
+import java.time.LocalDate;
 import java.util.*;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "chats")
-public class chatModel {
+public class chatModel {	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
-	
-	@Column(name = "chatId")
+
+  @Column(name = "chatId")
 	private String chatId;
 	
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
@@ -23,7 +24,7 @@ public class chatModel {
 	private UserModel secondaryUser;
 	
 	@ElementCollection // 1
-    @CollectionTable(name = "my_chats", joinColumns = @JoinColumn(name = "id")) // 2
+    @CollectionTable(name = "my_chats", joinColumns = @JoinColumn(name = "chatId")) // 2
     @Column(name = "chatHistory")
 	private List<String> chatHistory;
 	
@@ -31,23 +32,22 @@ public class chatModel {
 	private boolean status;
 	
 	@Column(name = "lastSeen")
-	private Date lastSeen;
+	private LocalDate lastSeen;
 	
 	public chatModel() {
 		
 	}
 
-	public chatModel(String chatId, UserModel primaryUser, UserModel secondaryUser,
-			boolean status, Date lastSeen) {
+	public chatModel(String chatId, UserModel primaryUser, UserModel secondaryUser, List<String> chatHistory,
+			boolean status, LocalDate lastSeen) {
 		super();
 		this.chatId = chatId;
 		this.primaryUser = primaryUser;
 		this.secondaryUser = secondaryUser;
-		//this.chatHistory = chatHistory;
+		this.chatHistory = chatHistory;
 		this.status = status;
 		this.lastSeen = lastSeen;
 	}
-
 	public int  getId() {
 		return id;
 	}
@@ -55,7 +55,6 @@ public class chatModel {
 	public void setId(int id) {
 		this.id = id;
 	}
-
 	public String getChatId() {
 		return chatId;
 	}
@@ -96,11 +95,11 @@ public class chatModel {
 		this.status = status;
 	}
 
-	public Date getLastSeen() {
+	public LocalDate getLastSeen() {
 		return lastSeen;
 	}
 
-	public void setLastSeen(Date lastSeen) {
+	public void setLastSeen(LocalDate lastSeen) {
 		this.lastSeen = lastSeen;
 	}
 	

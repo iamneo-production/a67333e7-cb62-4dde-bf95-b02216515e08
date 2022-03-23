@@ -1,12 +1,13 @@
 package com.examly.springapp.repository;
+
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.examly.springapp.model.UserModel;
+import com.examly.springapp.model.chatModel;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserModel, Integer>{
-  UserModel findAllById(int id);
+public interface ChatRepository  extends JpaRepository<chatModel, String>{
+
 }

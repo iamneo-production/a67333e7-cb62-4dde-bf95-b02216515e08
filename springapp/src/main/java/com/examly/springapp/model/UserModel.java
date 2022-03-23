@@ -52,8 +52,6 @@ public class UserModel {
 		this.role = role;
 	}
 
-
-
 	public int getId() {
 		return id;
 	}
