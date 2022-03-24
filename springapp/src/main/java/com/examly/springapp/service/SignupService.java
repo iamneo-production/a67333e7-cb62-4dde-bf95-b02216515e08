@@ -2,13 +2,10 @@ package com.examly.springapp.service;
 
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repository.UserRepository;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class SignupService {
@@ -31,14 +28,20 @@ public class SignupService {
         userRepository.deleteById(id);
         return "User removed of id"+id;
     }
-    public UserModel updateUser(UserModel user){
-        UserModel existingUser= userRepository.findAllById(user.getId());
-        existingUser.setEmail(user.getEmail());
-        existingUser.setUsername(user.getUsername());
-        existingUser.setPassword(user.getPassword());
-        existingUser.setMobileNumber(user.getMobileNumber());
-        existingUser.setRole(user.getRole());
-        return userRepository.save(existingUser);
+    public String updateUser(int id, UserModel user) {
+        UserModel existingUser = userRepository.findAllById(id);
+        if (existingUser == null) {
+            return "User Not Found";
+        } else {
+            existingUser.setEmail(user.getEmail());
+            existingUser.setUsername(user.getUsername());
+            existingUser.setPassword(user.getPassword());
+            existingUser.setMobileNumber(user.getMobileNumber());
+            existingUser.setRole(user.getRole());
+            existingUser.setQualification((user.getQualification()));
+            userRepository.save(existingUser);
+            return "User Updated";
+        }
     }
 
 

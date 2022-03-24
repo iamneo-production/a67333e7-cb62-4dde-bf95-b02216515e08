@@ -5,7 +5,7 @@ import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "users")
-public class UserModel {
+public class UserModel{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
