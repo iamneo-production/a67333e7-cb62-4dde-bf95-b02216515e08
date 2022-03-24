@@ -28,5 +28,4 @@ public class ResourceController {
     public String updateRes(@PathVariable("id") int id,@RequestBody ResourceModel resupdate){
         return resourceService.updateResource(id,resupdate);
     }
-
 }
