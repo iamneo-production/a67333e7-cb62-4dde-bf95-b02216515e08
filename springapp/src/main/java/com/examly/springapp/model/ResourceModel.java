@@ -13,8 +13,6 @@ public class ResourceModel {
 	@Column(name = "id")
 	private int id;
 
-	@GeneratedValue(generator = "UUID")
-	@GenericGenerator(name = "UUID",strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "resourceId")
 	private String resourceId;
 	

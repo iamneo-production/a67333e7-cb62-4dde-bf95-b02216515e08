@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./HomeComponents/Home";
+import Home from "./signup/App";
 /*import Login from "./Login";
 import {
   BrowserRouter as Router,
