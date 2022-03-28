@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="672722ef-e53c-4f93-a0fa-dd562ea5306a" name="Changes" comment="" />
+    <list default="true" id="672722ef-e53c-4f93-a0fa-dd562ea5306a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/springapp/src/main/java/com/examly/springapp/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springapp/src/main/java/com/examly/springapp/controller/ResourceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springapp/src/main/java/com/examly/springapp/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springapp/src/main/java/com/examly/springapp/service/ResourceService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
