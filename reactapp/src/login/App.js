@@ -1,8 +1,17 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "../HomeComponents/Components/Navbar";
+import { Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 function App() {
-  const initialValues = { email: "",username: "",mobilenumber: "", password: "",confirmpassword: "" };
+  const initialValues = {
+    email: "",
+    username: "",
+    mobilenumber: "",
+    password: "",
+    confirmpassword: "",
+  };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -40,38 +49,58 @@ function App() {
       errors.password = "Password cannot exceed more than 10 characters";
     }
     return errors;
-  }; 
+  };
 
   return (
-    <div className="container">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="ui divider"></div>
-        <div className="ui form">
-        <div className="field">
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter email"
-              value={formValues.email}
-              onChange={handleChange}
-            />
+    <div>
+      <div>
+        <>
+          <Navbar bg="dark" variant="dark">
+            <Container className="nav">
+              <Navbar.Brand href="#home">
+                <img
+                  alt=""
+                  src="/logo.svg"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                />{" "}
+              </Navbar.Brand>
+            </Container>
+          </Navbar>
+        </>
+      </div>
+      <div className="container">
+        <div></div>
+        <form onSubmit={handleSubmit}>
+          <div className="ui divider"></div>
+          <div className="ui form">
+            <h1>Login</h1>
+            <div className="field">
+              <input
+                type="text"
+                name="email"
+                placeholder="Enter email"
+                value={formValues.email}
+                onChange={handleChange}
+              />
+            </div>
+            <p>{formErrors.email}</p>
+            <div className="field">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formValues.password}
+                onChange={handleChange}
+              />
+            </div>
+            <p>{formErrors.password}</p>
+            <Button variant="primary">Login</Button>
           </div>
-          <p>{formErrors.email}</p>
-          <div className="field">
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formValues.password}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.password}</p>
-          <button className="fluid ui button blue">Login</button>
-        </div>
-      </form>
-      <h5>New user then signup here</h5>
+        </form>
+        <h5>New user then signup here</h5>
+      </div>
     </div>
   );
 }

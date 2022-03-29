@@ -2,9 +2,8 @@ import React from "react";
 
 import Home from "./HomeComponents/Home";
 import AdminPage from "./AdminResourceComponents/AdminPage";
-
-import Home from "./signup/App";
-
+import Login from "./login/App";
+import "bootstrap/dist/css/bootstrap.min.css";
 /*import Login from "./Login";
 import {
   BrowserRouter as Router,
@@ -16,9 +15,7 @@ import {
 function App() {
   return (
     <div className="App">
-      <Home />
-
-	  <AdminPage />
+      <Login />
     </div>
   );
 }

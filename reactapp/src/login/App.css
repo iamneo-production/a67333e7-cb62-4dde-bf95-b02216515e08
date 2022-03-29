@@ -7,37 +7,33 @@ body {
     rgba(93, 93, 116, 1) 100%
   );*/
 }
-h1{
-  color: hsl(270, 56%, 52%);
+h1 {
+  color: white;
+  text-align: center;
 }
 .container {
-  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  max-width: 500px;
-  width: 100%;
-  margin: auto;
+  margin-top: 10%;
+  width: 50%;
 }
 .container > form {
+  align-self: center;
   display: flex;
-  width: 40%;
-  padding: 20px;
-  border-radius: 10px;
-}
-pre {
-  width: 40%;
-  color: #fff;
-  font-size: larger;
+  width: 50%;
+  padding: 2%;
+  border-radius: 2%;
 }
 
 button {
-  background: hsl(270, 56%, 52%) ;
+  padding: 10px;
+  background: hsl(270, 56%, 52%);
 }
 p {
   color: red;
 }
 h5 {
-  color : black
+  text-align: center;
+  color: black;
 }
