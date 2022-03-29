@@ -1,9 +1,13 @@
 import React from "react";
 
+import './App.css';
+
 import Home from "./HomeComponents/Home";
 import AdminPage from "./AdminResourceComponents/AdminPage";
 import Login from "./login/App";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import Chat from './ChatComponents/Chat.js';
 /*import Login from "./Login";
 import {
   BrowserRouter as Router,
@@ -15,7 +19,8 @@ import {
 function App() {
   return (
     <div className="App">
-      <Login />
+      <App />
+      {/* <Chat primaryUserId="1" secondaryUserId="2" secondaryUserName = "Teacher"/> */}
     </div>
   );
 }

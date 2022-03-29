@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+
+#rightChat{
+  float: right;
+}
+
+#leftChat{
+  float: left;
+}
+
+.chatBox{
+  margin: 5px;
+  padding: 10px;
+  background-color: bisque;
+  width: 50%;
+  border-radius: 15px;
+}
+
+.chatInputField{
+  width: 70%;
+  padding: 8px 15px;
+  margin: 8px 3px;
+  border-radius: 10px;
+}
+
+.sendBtn{
+  width: 10%;
+  border-radius: 10px;
+}
+
+.scroll{
+  overflow: auto;
+  height: 400px;
+}
