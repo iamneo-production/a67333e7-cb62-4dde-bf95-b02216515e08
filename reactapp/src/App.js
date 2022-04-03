@@ -1,13 +1,13 @@
 import React from "react";
 
-import './App.css';
+import "./App.css";
 
-import Home from "./HomeComponents/Home";
-import AdminPage from "./AdminResourceComponents/AdminPage";
-import Login from "./login/App";
+import Home from "./HomePages/HomeComponents/Home";
+import AdminPage from "./HomePages/AdminResourceComponents/AdminPage";
+import Login from "./EntryPages/login/App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Chat from './ChatComponents/Chat.js';
+import Chat from "./HomePages/ChatComponents/Chat.js";
 /*import Login from "./Login";
 import {
   BrowserRouter as Router,
@@ -19,7 +19,7 @@ import {
 function App() {
   return (
     <div className="App">
-      <App />
+      <Login />
       {/* <Chat primaryUserId="1" secondaryUserId="2" secondaryUserName = "Teacher"/> */}
     </div>
   );

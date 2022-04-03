@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "../HomeComponents/Components/Navbar";
+import Navbar from "../Navbar/Navbar";
 import { Container } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 function App() {
@@ -52,30 +52,16 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="bg">
       <div>
-        <>
-          <Navbar bg="dark" variant="dark">
-            <Container className="nav">
-              <Navbar.Brand href="#home">
-                <img
-                  alt=""
-                  src="/logo.svg"
-                  width="30"
-                  height="30"
-                  className="d-inline-block align-top"
-                />{" "}
-              </Navbar.Brand>
-            </Container>
-          </Navbar>
-        </>
+        <Navbar />
       </div>
       <div className="container">
         <div></div>
         <form onSubmit={handleSubmit}>
           <div className="ui divider"></div>
-          <div className="ui form">
-            <h1>Login</h1>
+          <div className="uiform">
+            <p>Login</p>
             <div className="field">
               <input
                 type="text"
@@ -98,8 +84,8 @@ function App() {
             <p>{formErrors.password}</p>
             <Button variant="primary">Login</Button>
           </div>
+          <h6>New user then signup here</h6>
         </form>
-        <h5>New user then signup here</h5>
       </div>
     </div>
   );

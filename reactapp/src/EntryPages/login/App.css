@@ -1,5 +1,7 @@
 body {
   background: white;
+  background-image: url(../bg.png);
+
   /*background: radial-gradient(
     circle,
     rgba(2, 0, 36, 1) 0%,
@@ -7,10 +9,12 @@ body {
     rgba(93, 93, 116, 1) 100%
   );*/
 }
-h1 {
+p {
   color: white;
   text-align: center;
+  font-size: 300%
 }
+
 .container {
   flex-direction: column;
   justify-content: center;
@@ -21,17 +25,18 @@ h1 {
 .container > form {
   align-self: center;
   display: flex;
-  width: 50%;
+  width: 70%;
   padding: 2%;
   border-radius: 2%;
+  background-color:#9fbfe9 ;
+}
+.uiform{
+  width:50%
 }
 
 button {
   padding: 10px;
   background: hsl(270, 56%, 52%);
-}
-p {
-  color: red;
 }
 h5 {
   text-align: center;
