@@ -5,6 +5,9 @@
   overflow: hidden;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+html{
+  overflow: scroll;
+}
 #Home {
   width: 100%;
 }
@@ -19,8 +22,8 @@
 
 .navbar_right > button {
   height: 40px;
-  width: 80px;
-  background-color: #a31aff;
+  width: 100px;
+  background-color: inherit;
   color: white;
   border-radius: 10px;
   border: none;
@@ -41,14 +44,14 @@
   padding: 20px;
   border-radius: 10px;
   font-size: 18px;
-  border: 2px solid #a31aff;
+  border: 2px solid #9fbfe9;
 }
 #searchButton {
   margin-left: 20px;
   margin-top: 20px;
   height: 40px;
   width: 80px;
-  background-color: #a31aff;
+  background-color: #0d6efd;
   color: white;
   border-radius: 10px;
   border: none;
@@ -82,7 +85,8 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: #ccb3ff;
+  background-color: #9fbfe9;
+  color: black;
   border-radius: 10px;
   margin: 20px;
 }
@@ -135,7 +139,7 @@
 form {
   height: 500px;
   width: 350px;
-  background: #ccb3ff;
+  background: #9fbfe9;
   padding: 0 30px;
   margin-left: auto;
   margin-right: auto;
@@ -172,7 +176,7 @@ form input {
 }
 form input[type="submit"] {
   width: 50%;
-  background: #a31aff;
+  background: #0d6efd;
   color: white;
   margin-left: auto;
   margin-right: auto;

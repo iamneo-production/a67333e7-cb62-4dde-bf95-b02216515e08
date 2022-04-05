@@ -1,11 +1,14 @@
 import React from "react";
+import Axios from 'axios';
 import CardData from "./CardData.js";
 //import { Link } from "react-router-dom";
 
 export default function Card(props) {
   let count = 1;
   let id = "grid";
-  const allCards = CardData.map(function (data) {
+  let url = "http://localhost:8080/home";
+  const allCards = 
+    CardData.map(function (data) {
     if (
       !props.name ||
       data.resourceName.toLowerCase().includes(props.name.toLowerCase())
@@ -13,10 +16,7 @@ export default function Card(props) {
       let stringId = id + count;
       count = count + 1;
       return (
-        <section
-          className="col-lg-3 col-md-4 col-sm-6 col-xs-12  card"
-          id={stringId}
-        >
+        <section className="col-md-4 col-sm-6 col-xs-12 card" id={stringId}>
           <img
             className="card--image"
             src={`homeImages/${data.imageUrl}`}
@@ -37,7 +37,11 @@ export default function Card(props) {
         </section>
       );
     } else return "";
-  });
-
-  return [allCards];
+  }); 
+//})
+return [allCards];
 }
+
+/*
+CardData.then((res) => {
+  */

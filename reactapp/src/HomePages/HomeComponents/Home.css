@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #a31aff;
+  background-color: #6085b2;
   padding: 20px;
   color: white;
 }
@@ -19,7 +19,7 @@
 #logout {
   height: 40px;
   width: 80px;
-  background-color: #a31aff;
+  background-color: inherit;
   color: white;
   border-radius: 10px;
   border: none;
@@ -40,14 +40,14 @@
   padding: 20px;
   border-radius: 10px;
   font-size: 18px;
-  border: 2px solid #a31aff;
+  border: 2px solid #9fbfe9;
 }
 #searchButton {
   margin-left: 20px;
   margin-top: 20px;
   height: 40px;
   width: 80px;
-  background-color: #a31aff;
+  background-color: #9fbfe9;
   color: white;
   border-radius: 10px;
   border: none;
@@ -80,7 +80,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-color: #ccb3ff;
+  background-color: #9fbfe9;
   border-radius: 10px;
   margin: 20px;
 }

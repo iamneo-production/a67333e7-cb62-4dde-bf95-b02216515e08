@@ -8,6 +8,7 @@ import Login from "./EntryPages/login/App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Chat from "./HomePages/ChatComponents/Chat.js";
+import AdminResource from "./HomePages/AdminResourceComponents/Components/AdminResource";
 /*import Login from "./Login";
 import {
   BrowserRouter as Router,
@@ -19,8 +20,7 @@ import {
 function App() {
   return (
     <div className="App">
-      <Login />
-      {/* <Chat primaryUserId="1" secondaryUserId="2" secondaryUserName = "Teacher"/> */}
+      <AdminPage />
     </div>
   );
 }
