@@ -1,0 +1,40 @@
+body {
+  background: white;
+  background-image: url(../bg.png);
+}
+p {
+  color: white;
+  text-align: center;
+  font-size: 300%
+}
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  width: 50%;
+}
+.container > form {
+  align-self: center;
+  display: flex;
+  width: 70%;
+  padding: 2%;
+  border-radius: 2%;
+  background-color:#9fbfe9d0 ;
+}
+.uiform{
+  width:50%
+}
+
+button {
+  padding: 10px;
+  background: hsl(270, 56%, 52%);
+}
+h5 {
+  text-align: center;
+  color: black;
+}
+.sgup{
+  font-size: 20px;
+}

@@ -1,0 +1,48 @@
+/*body {
+  background: white;
+  /*background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(30, 54, 59, 1) 0%,
+    rgba(93, 93, 116, 1) 100%
+  );
+}
+h1{
+  color: hsl(270, 56%, 52%);
+}
+.container {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+.container > form {
+  display: flex;
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+}
+pre {
+  width: 40%;
+  color: #fff;
+  font-size: larger;
+}
+
+button {
+  background: hsl(270, 56%, 52%) ;
+}
+p {
+  color: red;
+}
+h5 {
+  color : black;
+}
+hr {
+  color :red;
+  height : 100px;
+}
+*/
