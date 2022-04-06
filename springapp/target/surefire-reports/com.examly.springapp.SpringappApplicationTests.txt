@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.examly.springapp.SpringappApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.37 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
+BE_Update_Resource  Time elapsed: 0.223 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.examly.springapp.SpringappApplicationTests.BE_Update_Resource(SpringappApplicationTests.java:72)
+
+BE_Get_User  Time elapsed: 0.239 s  <<< FAILURE!
+java.lang.AssertionError: Expected a non-empty value at JSON path "$" but found: []
+	at com.examly.springapp.SpringappApplicationTests.BE_Get_User(SpringappApplicationTests.java:47)
+
+BE_Add_Resource  Time elapsed: 0.046 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<400>
+	at com.examly.springapp.SpringappApplicationTests.BE_Add_Resource(SpringappApplicationTests.java:59)
+
