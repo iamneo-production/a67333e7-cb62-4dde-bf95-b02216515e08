@@ -69,6 +69,7 @@ function App() {
         <div className="ui form">
           <div className="field">
             <input
+              id="email"
               type="text"
               name="email"
               placeholder="Enter email"
@@ -79,6 +80,7 @@ function App() {
           <p>{formErrors.email}</p>
           <div className="field">
             <input
+              id="username"
               type="text"
               name="username"
               placeholder="Username"
@@ -89,6 +91,7 @@ function App() {
           <p>{formErrors.username}</p>
           <div className="field">
             <input
+              id="mobileNumber"
               type="text"
               name="mobilenumber"
               placeholder="Enter Mobilenumber"
@@ -99,6 +102,7 @@ function App() {
           <p>{formErrors.mobilenumber}</p>
           <div className="field">
             <input
+              id="password"
               type="password"
               name="password"
               placeholder="Password"
@@ -109,6 +113,7 @@ function App() {
           <p>{formErrors.password}</p>
           <div className="field">
             <input
+              id="confirmPassword"
               type="password"
               name="confirmpassword"
               placeholder="Confirm Password"
@@ -117,10 +122,17 @@ function App() {
             />
           </div>
           <p>{formErrors.confirmpassword}</p>
-          <button className="fluid ui button blue">Submit</button>
+          <button className="fluid ui button blue" id="submitButton">
+            Submit
+          </button>
         </div>
       </form>
-      <h5>already a user?</h5>
+      <p>
+        Already a user?
+        <a href="/login" id="signinLink">
+          Login
+        </a>
+      </p>
     </div>
   );
 }
