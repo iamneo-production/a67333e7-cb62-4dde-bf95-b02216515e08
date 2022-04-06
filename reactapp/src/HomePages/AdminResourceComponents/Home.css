@@ -8,6 +8,9 @@
 html{
   overflow: scroll;
 }
+.link {
+  text-decoration: none;
+}
 #Home {
   width: 100%;
 }
@@ -20,7 +23,7 @@ html{
   color: white;
 }
 
-.navbar_right > button {
+.navbar_right > .navlink > button {
   height: 40px;
   width: 100px;
   background-color: inherit;

@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+.link {
+  text-decoration: none;
+}
 #Home {
   width: 100%;
 }
@@ -15,7 +18,9 @@
   padding: 20px;
   color: white;
 }
-
+.navbar_left>h1{
+  color: white;
+}
 #logout {
   height: 40px;
   width: 80px;
