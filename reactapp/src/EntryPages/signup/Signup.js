@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./signup.css";
 
 function App() {
-  const initialValues = { email: "",username: "",mobilenumber: "", password: "",confirmpassword: "" };
+  const initialValues = {
+    email: "",
+    username: "",
+    mobilenumber: "",
+    password: "",
+    confirmpassword: "",
+  };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -35,9 +41,9 @@ function App() {
     if (!values.username) {
       errors.username = "Username is required!";
     }
-    if(!values.mobilenumber){
+    if (!values.mobilenumber) {
       errors.mobilenumber = "Mobilenumber is required";
-    }else if(!values.mobilenumber.length == 10){
+    } else if (!values.mobilenumber.length == 10) {
       errors.mobilenumber = "Mobilenumber should be 10 digits";
     }
     if (!values.password) {
@@ -53,7 +59,7 @@ function App() {
       errors.confirmpassword = "ConfirmPassword is not matched";
     }
     return errors;
-  }; 
+  };
 
   return (
     <div className="container">
@@ -61,7 +67,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <div className="ui divider"></div>
         <div className="ui form">
-        <div className="field">
+          <div className="field">
             <input
               type="text"
               name="email"
