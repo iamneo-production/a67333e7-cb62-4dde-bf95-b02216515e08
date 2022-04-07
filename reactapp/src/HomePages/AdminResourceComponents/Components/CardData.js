@@ -40,7 +40,7 @@ export default [
     resourceCategory: "Back-End Technology",
     createdOn: 2015,
     createdBy: "",
-    verified: false,
+    verified: true,
     active: true
   },
   {
@@ -62,7 +62,7 @@ export default [
     resourceCategory: "Back-End Technology",
     createdOn: 2020,
     createdBy: "",
-    verified: false,
+    verified: true,
     active: true
   }
 ];

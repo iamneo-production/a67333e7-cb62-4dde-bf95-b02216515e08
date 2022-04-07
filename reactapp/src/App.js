@@ -10,16 +10,6 @@ import Signup from "./EntryPages/signup/Signup";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Chat from "./HomePages/ChatComponents/Chat.js";
-/*import Login from "./Login";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import Chat from "./HomePages/ChatComponents/Chat.js";
-/*import Login from "./Login";
- */
 
 function App() {
   return (
@@ -39,14 +29,3 @@ function App() {
 }
 
 export default App;
-
-/*
-  
-  <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Redirect to="/" />
-        </Switch>
-      </Router>
-*/

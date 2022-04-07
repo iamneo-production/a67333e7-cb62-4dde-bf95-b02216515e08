@@ -21,6 +21,7 @@ export default function UserHome() {
             id="searchBox"
           />
           <Button variant="primary" id="searchButton" onClick={handleSearch}>
+
             Search
           </Button>
         </div>

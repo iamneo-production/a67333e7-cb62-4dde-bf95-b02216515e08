@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+.link{
+  text-decoration: none;
+}
 #Home {
   width: 100%;
 }
@@ -22,7 +25,7 @@
   padding: 20px;
   border-radius: 10px;
   font-size: 18px;
-  border: 2px solid #a31aff;
+  border: 2px solid #0d6efd;
 }
 #searchButton {
 margin: 20px;
@@ -40,26 +43,32 @@ margin: 20px;
   width: 100%;
 }
 
-.card--section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
 .card {
   max-width: 200px;
   max-height: 300px;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   background-color: #ccb3ff;
   border-radius: 10px;
   margin: 20px;
+  text-decoration: none;
 }
-.card > * {
+.inside{
+  width: 100%;
+  height: 100%;
+  background-color: #9fbfe9d0;
+}
+.inside > * {
   margin: 5px 0;
+  font-size: 18px;
+  color: black;
 }
+.inside > h3 {
+  font-size: 25px;
+
+} 
 .card--image {
   width: 100%;
   padding: 2px;

@@ -20,6 +20,7 @@ export default function AdminResource() {
           id="searchBox"
         />
         <Button variant="primary" id="searchbtn" onClick={handleSearch}>
+
           Search
         </Button>
       </div>
