@@ -1,4 +1,4 @@
-[10:20 pm, 07/04/2022] kommarahul7377: import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./signup.css";
 import axios from "axios";
 import { Button } from "react-bootstrap";
