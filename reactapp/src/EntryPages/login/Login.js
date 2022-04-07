@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../Navbar/Navbar";
-import { Container } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 function App() {
   const initialValues = {
@@ -56,7 +55,7 @@ function App() {
       <div>
         <Navbar />
       </div>
-      <div className="container">
+      <div className="container" id="loginBox">
         <div></div>
         <form onSubmit={handleSubmit}>
           <div className="ui divider"></div>
@@ -66,6 +65,7 @@ function App() {
               <input
                 type="text"
                 name="email"
+                id="email"
                 placeholder="Enter email"
                 value={formValues.email}
                 onChange={handleChange}
@@ -74,6 +74,7 @@ function App() {
             <p>{formErrors.email}</p>
             <div className="field">
               <input
+                id="password"
                 type="password"
                 name="password"
                 placeholder="Password"
@@ -82,9 +83,16 @@ function App() {
               />
             </div>
             <p>{formErrors.password}</p>
-            <Button variant="primary">Login</Button>
+            <Button variant="primary" id="loginButton">
+              Login
+            </Button>
           </div>
-          <h6>New user then signup here</h6>
+          <p className="sgup">
+            New User?{" "}
+            <a href="/Signup" id="signupLink">
+              Signup
+            </a>
+          </p>
         </form>
       </div>
     </div>

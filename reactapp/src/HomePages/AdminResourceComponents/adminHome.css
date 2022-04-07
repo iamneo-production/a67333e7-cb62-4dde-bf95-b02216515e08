@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow: hidden;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #Home {
@@ -12,15 +11,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #a31aff;
   padding: 20px;
   color: white;
 }
 
-.navbar_right > button {
+#homeButton, #coursesButton, #logoutButton{
   height: 40px;
-  width: 80px;
-  background-color: #a31aff;
+  width: 100px;
+  background-color: inherit;
   color: white;
   border-radius: 10px;
   border: none;
@@ -41,14 +39,14 @@
   padding: 20px;
   border-radius: 10px;
   font-size: 18px;
-  border: 2px solid #a31aff;
+  border: 2px solid #0d6efd;
 }
 #searchButton {
   margin-left: 20px;
   margin-top: 20px;
   height: 40px;
   width: 80px;
-  background-color: #a31aff;
+  background-color: #0d6efd;
   color: white;
   border-radius: 10px;
   border: none;
@@ -68,13 +66,7 @@
   width: 100%;
 }
 
-.card--section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
+
 .card {
   max-width: 200px;
   max-height: 300px;
@@ -85,10 +77,22 @@
   background-color: #ccb3ff;
   border-radius: 10px;
   margin: 20px;
+  text-decoration: none;
 }
-.card > * {
+.inside{
+  width: 100%;
+  height: 100%;
+  background-color: #9fbfe9d0;
+}
+.inside > * {
   margin: 5px 0;
+  font-size: 18px;
+  color: black;
 }
+.inside > h3 {
+  font-size: 25px;
+
+} 
 .card--image {
   width: 100%;
   padding: 2px;
@@ -98,7 +102,7 @@
 }
 .lower--box {
   display: flex;
-  width: 200px;
+  width: 100%;
   height: 30px;
   margin-bottom: 0;
 }
@@ -114,6 +118,10 @@
   }
   #searchBox {
     width: 400px;
+  }
+  .active{
+    position: relative;
+    bottom: 10px;
   }
 }
 
@@ -135,7 +143,7 @@
 form {
   height: 500px;
   width: 350px;
-  background: #ccb3ff;
+  background: #9fbfe9d0;
   padding: 0 30px;
   margin-left: auto;
   margin-right: auto;
@@ -172,7 +180,7 @@ form input {
 }
 form input[type="submit"] {
   width: 50%;
-  background: #a31aff;
+  background: #0d6efd;
   color: white;
   margin-left: auto;
   margin-right: auto;

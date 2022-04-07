@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./adminHome.css";
 import NavbarAdmin from "./Components/NavbarAdmin";
 import AdminResource from "./Components/AdminResource";
 function Home() {

@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./signup.css";
 
 function App() {
-  const initialValues = { email: "",username: "",mobilenumber: "", password: "",confirmpassword: "" };
+  const initialValues = {
+    email: "",
+    username: "",
+    mobilenumber: "",
+    password: "",
+    confirmpassword: "",
+  };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -35,9 +41,9 @@ function App() {
     if (!values.username) {
       errors.username = "Username is required!";
     }
-    if(!values.mobilenumber){
+    if (!values.mobilenumber) {
       errors.mobilenumber = "Mobilenumber is required";
-    }else if(!values.mobilenumber.length == 10){
+    } else if (!values.mobilenumber.length == 10) {
       errors.mobilenumber = "Mobilenumber should be 10 digits";
     }
     if (!values.password) {
@@ -53,7 +59,7 @@ function App() {
       errors.confirmpassword = "ConfirmPassword is not matched";
     }
     return errors;
-  }; 
+  };
 
   return (
     <div className="container">
@@ -61,8 +67,9 @@ function App() {
       <form onSubmit={handleSubmit}>
         <div className="ui divider"></div>
         <div className="ui form">
-        <div className="field">
+          <div className="field">
             <input
+              id="email"
               type="text"
               name="email"
               placeholder="Enter email"
@@ -73,6 +80,7 @@ function App() {
           <p>{formErrors.email}</p>
           <div className="field">
             <input
+              id="username"
               type="text"
               name="username"
               placeholder="Username"
@@ -83,6 +91,7 @@ function App() {
           <p>{formErrors.username}</p>
           <div className="field">
             <input
+              id="mobileNumber"
               type="text"
               name="mobilenumber"
               placeholder="Enter Mobilenumber"
@@ -93,6 +102,7 @@ function App() {
           <p>{formErrors.mobilenumber}</p>
           <div className="field">
             <input
+              id="password"
               type="password"
               name="password"
               placeholder="Password"
@@ -103,6 +113,7 @@ function App() {
           <p>{formErrors.password}</p>
           <div className="field">
             <input
+              id="confirmPassword"
               type="password"
               name="confirmpassword"
               placeholder="Confirm Password"
@@ -111,10 +122,17 @@ function App() {
             />
           </div>
           <p>{formErrors.confirmpassword}</p>
-          <button className="fluid ui button blue">Submit</button>
+          <button className="fluid ui button blue" id="submitButton">
+            Submit
+          </button>
         </div>
       </form>
-      <h5>already a user?</h5>
+      <p>
+        Already a user?
+        <a href="/login" id="signinLink">
+          Login
+        </a>
+      </p>
     </div>
   );
 }

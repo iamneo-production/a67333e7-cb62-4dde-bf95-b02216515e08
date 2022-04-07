@@ -18,7 +18,7 @@ export default function UserHome() {
             onChange={(e) => setSearch(e.target.value)}
             id="searchBox"
           />
-          <button id="searchButton" onClick={handleSearch}>
+          <button id="searchButton" className="btn-primary" onClick={handleSearch}>
             Search
           </button>
         </div>

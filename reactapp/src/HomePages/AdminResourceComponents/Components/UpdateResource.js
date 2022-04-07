@@ -49,6 +49,7 @@ export default function UpdateResources() {
         value="Update"
         id="updateResource"
         name="updateResource"
+        className=" btn-primary"
       />
     </form>
   );

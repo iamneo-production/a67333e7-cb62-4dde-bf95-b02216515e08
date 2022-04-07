@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -7,9 +8,11 @@ export default function Navbar() {
         <h1>TrulyCourse</h1>
       </div>
       <div className="navbar_right">
-        <button id="logout" value="Logout">
-          Logout
-        </button>
+        <Link to="/login">
+          <button id="logout" value="Logout">
+            Logout
+          </button>
+        </Link>
       </div>
     </nav>
   );
