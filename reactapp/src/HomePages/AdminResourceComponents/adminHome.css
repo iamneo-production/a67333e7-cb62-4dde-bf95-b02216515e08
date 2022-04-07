@@ -171,9 +171,8 @@ form input {
 }
 form input[type="submit"] {
   width: 50%;
-
   background: #0d6efd;
-  color: white;ain
+  color: white;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
