@@ -10,19 +10,6 @@ import Signup from "./EntryPages/signup/Signup";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Chat from "./HomePages/ChatComponents/Chat.js";
-<<<<<<< HEAD
-=======
-/*import Login from "./Login";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import Chat from "./HomePages/ChatComponents/Chat.js";
-/*import Login from "./Login";
- */
->>>>>>> 1d462ce8e31449cb4b4f934b94b2f1cfe409744d
 
 function App() {
   return (
