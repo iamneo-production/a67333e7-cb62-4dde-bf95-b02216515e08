@@ -1,9 +1,6 @@
-import { useState, useEffect } from "react";
 import "./error.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../Navbar/Navbar";
-import { Container } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 
 function App() {
   return (

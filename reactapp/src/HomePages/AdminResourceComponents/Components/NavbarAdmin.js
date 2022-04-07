@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Button } from "react-bootstrap";
 export default function Navbar() {
   return (
     <nav className="navbar">
@@ -7,15 +7,15 @@ export default function Navbar() {
         <h1>TrulyCourse</h1>
       </div>
       <div className="navbar_right">
-        <button id="homeButton" value="Home">
+        <Button variant="primary" value="Home">
           Home
-        </button>
-        <button id="coursesButton" value="Courses">
+        </Button>
+        <Button variant="primary" value="Courses">
           Courses
-        </button>
-        <button id="logoutButton" value="Logout">
+        </Button>
+        <Button variant="primary" value="Logout">
           Logout
-        </button>
+        </Button>
       </div>
     </nav>
   );

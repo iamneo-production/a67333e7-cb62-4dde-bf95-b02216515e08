@@ -2,4 +2,11 @@
     display: grid;
     grid-template-columns: 1.4fr 0.6fr;
     grid-gap: 20px;
+    
+}
+.res-view{
+    height: 100%;
+    overflow-Y: scroll;
+    overflow-x: scroll;
+    padding: 12%;
 }

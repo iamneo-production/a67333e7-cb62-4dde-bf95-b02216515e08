@@ -7,25 +7,7 @@
 #Home {
   width: 100%;
 }
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #a31aff;
-  padding: 20px;
-  color: white;
-}
 
-#logout {
-  height: 40px;
-  width: 80px;
-  background-color: #a31aff;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-}
 #userHome {
   width: 100%;
 }
@@ -43,16 +25,7 @@
   border: 2px solid #a31aff;
 }
 #searchButton {
-  margin-left: 20px;
-  margin-top: 20px;
-  height: 40px;
-  width: 80px;
-  background-color: #a31aff;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
+margin: 20px;
 }
 .courses {
   width: 80%;

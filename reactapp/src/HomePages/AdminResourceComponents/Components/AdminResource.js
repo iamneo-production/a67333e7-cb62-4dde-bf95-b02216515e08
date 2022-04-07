@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import UpdateResource from "./UpdateResource";
+import { Button } from "react-bootstrap";
 
 export default function AdminResource() {
   const [name, setName] = useState(undefined);
@@ -18,9 +19,9 @@ export default function AdminResource() {
           onChange={(e) => setSearch(e.target.value)}
           id="searchBox"
         />
-        <button id="searchButton" onClick={handleSearch}>
+        <Button variant="primary" id="searchbtn" onClick={handleSearch}>
           Search
-        </button>
+        </Button>
       </div>
       <div className="main--container">
         <div className="courses col-md-8 col-xs-12">

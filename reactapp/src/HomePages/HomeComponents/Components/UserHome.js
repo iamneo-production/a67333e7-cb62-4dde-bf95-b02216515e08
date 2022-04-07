@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Card from "./Card";
 
+import { Button } from "react-bootstrap";
+
 export default function UserHome() {
   const [name, setName] = useState(undefined);
   const [search, setSearch] = useState("");
@@ -18,9 +20,9 @@ export default function UserHome() {
             onChange={(e) => setSearch(e.target.value)}
             id="searchBox"
           />
-          <button id="searchButton" onClick={handleSearch}>
+          <Button variant="primary" id="searchButton" onClick={handleSearch}>
             Search
-          </button>
+          </Button>
         </div>
       </div>
 

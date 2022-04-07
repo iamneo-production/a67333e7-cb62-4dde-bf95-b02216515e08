@@ -3,7 +3,9 @@ import "./login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../Navbar/Navbar";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 function App() {
+  let navigate = useNavigate();
   const initialValues = {
     email: "",
     username: "",
@@ -24,6 +26,19 @@ function App() {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    if (
+      formValues.email === "admin@admin.com" &&
+      formValues.password === "admin"
+    ) {
+      navigate("/admin");
+    } else if (
+      formValues.email === "user@user.com" &&
+      formValues.password === "user"
+    ) {
+      navigate("/home");
+    } else {
+      alert("User not registered");
+    }
   };
 
   useEffect(() => {
@@ -71,7 +86,7 @@ function App() {
                 onChange={handleChange}
               />
             </div>
-            <p>{formErrors.email}</p>
+            <p className="error">{formErrors.email}</p>
             <div className="field">
               <input
                 id="password"
@@ -82,8 +97,8 @@ function App() {
                 onChange={handleChange}
               />
             </div>
-            <p>{formErrors.password}</p>
-            <Button variant="primary" id="loginButton">
+            <p className="error">{formErrors.password}</p>
+            <Button variant="primary" id="loginButton" onClick={handleSubmit}>
               Login
             </Button>
           </div>

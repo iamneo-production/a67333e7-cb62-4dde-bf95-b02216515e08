@@ -38,3 +38,7 @@ h5 {
 .sgup{
   font-size: 20px;
 }
+.error{
+  font-size: 15px;
+  color: red;
+}

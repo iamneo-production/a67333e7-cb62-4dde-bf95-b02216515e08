@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Button } from "react-bootstrap";
 export default function Navbar() {
   return (
     <nav className="navbar">
@@ -7,9 +8,9 @@ export default function Navbar() {
         <h1>TrulyCourse</h1>
       </div>
       <div className="navbar_right">
-        <button id="logout" value="Logout">
+        <Button id="logout" value="Logout">
           Logout
-        </button>
+        </Button>
       </div>
     </nav>
   );

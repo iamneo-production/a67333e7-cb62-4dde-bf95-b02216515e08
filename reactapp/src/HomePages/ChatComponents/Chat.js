@@ -89,63 +89,70 @@ class ChatComponent extends Component {
         <div>
           <Navbar />
         </div>
-        <div class="grid-container">
-          <div class="Res-view">
-            <div></div>
-            <div></div>
+        <div className="grid-container">
+          <div className="res-view">
+            <div className="vedio"></div>
+            <div className="pdf">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/7c3-Gei5j4w"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
 
-            <div class="chat-view">
-              {" "}
-              <div className="container">
-                <h3>
-                  {this.state.secondaryUserName} &nbsp;&nbsp;
-                  <span>
-                    <button
-                      className="btn btn-danger btn-sm"
-                      onClick={this.deleteMsg}
-                    >
-                      {" "}
-                      Delete{" "}
-                    </button>
-                  </span>
-                </h3>
-
-                <div className="scroll">
-                  {this.state.chats.length == 0 ? (
-                    <div>
-                      <h6>No Chats...</h6>
-                    </div>
-                  ) : (
-                    this.state.chats.map((chat) => {
-                      var arr = chat.split(" -> ");
-                      var msg = arr[0];
-                      var sender = arr[1];
-                      if (sender === this.state.primaryUserId) {
-                        return <RightComponent msg={msg} />;
-                      } else {
-                        return <LeftComponent msg={msg} />;
-                      }
-                    })
-                  )}
-                </div>
-
-                <div>
-                  <span>
-                    <input
-                      type="text"
-                      className="chatInputField"
-                      placeholder="Send a message..."
-                      value={this.state.msg}
-                      onChange={this.changeMsgHandler}
-                    />
-                  </span>
+          <div className="chat-view">
+            {" "}
+            <div className="container">
+              <h3>
+                {this.state.secondaryUserName} &nbsp;&nbsp;
+                <span>
                   <button
-                    className="btn-primary sendBtn"
-                    onClick={this.sendMsg}
+                    className="btn btn-danger btn-sm"
+                    onClick={this.deleteMsg}
                   >
-                    Send
+                    {" "}
+                    Delete{" "}
                   </button>
-                </div>
+                </span>
+              </h3>
+
+              <div className="scroll">
+                {this.state.chats.length == 0 ? (
+                  <div>
+                    <h6>No Chats...</h6>
+                  </div>
+                ) : (
+                  this.state.chats.map((chat) => {
+                    var arr = chat.split(" -> ");
+                    var msg = arr[0];
+                    var sender = arr[1];
+                    if (sender === this.state.primaryUserId) {
+                      return <RightComponent msg={msg} />;
+                    } else {
+                      return <LeftComponent msg={msg} />;
+                    }
+                  })
+                )}
+              </div>
+
+              <div>
+                <span>
+                  <input
+                    type="text"
+                    className="chatInputField"
+                    placeholder="Send a message..."
+                    value={this.state.msg}
+                    onChange={this.changeMsgHandler}
+                  />
+                </span>
+                <button className="btn-primary sendBtn" onClick={this.sendMsg}>
+                  Send
+                </button>
               </div>
             </div>
           </div>
