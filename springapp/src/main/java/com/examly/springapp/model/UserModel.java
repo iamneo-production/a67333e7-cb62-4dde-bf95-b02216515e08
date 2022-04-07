@@ -23,7 +23,6 @@ public class UserModel{
 	private String username;
 	
 	@Column(name = "mobileNumber")
-	@NotEmpty
 	@Pattern(regexp="(^$|[0-9]{10})")
 	private String mobileNumber;
 	
